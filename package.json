@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/loveencounterflow/jquery-replace-text/issues"
   },
-  "homepage": "https://github.com/loveencounterflow/jquery-replace-text"
+  "homepage": "https://github.com/loveencounterflow/jquery-replace-text",
+  "dependencies": {}
 }

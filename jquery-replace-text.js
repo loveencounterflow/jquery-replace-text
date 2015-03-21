@@ -2,6 +2,23 @@
 (function() {
   var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
+  $.fn.text_nodes = function() {
+    var R;
+    R = [];
+    this.each(function() {
+      var fn;
+      fn = arguments.callee;
+      return ($(this)).contents().each(function() {
+        if (this.nodeType === 3) {
+          return R.push(this);
+        } else {
+          return fn.apply($(this));
+        }
+      });
+    });
+    return $(R);
+  };
+
   $.fn.replace_text = function(matcher, replacement, is_raw) {
     var to_be_removed;
     if (is_raw == null) {
