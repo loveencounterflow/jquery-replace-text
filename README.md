@@ -37,3 +37,13 @@ $.fn.replace_text = ( matcher, replacement, is_raw = no ) ->
 
 As a bonus, you get a snazzy `node.text_nodes()` method for free!
 
+## Installation
+
+Use `npm`:
+
+```bash
+npm install jquery-replace-text
+```
+
+
+
