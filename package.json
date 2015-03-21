@@ -1,6 +1,6 @@
 {
   "name": "jquery-replace-text",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Recursively replace text in an HTML structure.",
   "main": "jquery-replace-text.js",
   "scripts": {
