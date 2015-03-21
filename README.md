@@ -35,4 +35,5 @@ $.fn.replace_text = ( matcher, replacement, is_raw = no ) ->
     ( $ to_be_removed ).remove() if not is_raw and to_be_removed.length > 0
 ```
 
+As a bonus, you get a snazzy `node.text_nodes()` method for free!
 
