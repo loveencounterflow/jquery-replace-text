@@ -13,9 +13,9 @@ $.fn.text_nodes = ->
   return $ R
 
 #-----------------------------------------------------------------------------------------------------------
-$.fn.replace_text = ( matcher, replacement, is_raw = no ) ->
+$.fn.replace_text = ( matcher, replacement, is_raw = no, text_nodes = null ) ->
   to_be_removed = if is_raw then null else []
-  @text_nodes().each ( idx ) ->
+  ( text_nodes ? @text_nodes() ).each ( idx ) ->
     if ( new_value = @nodeValue.replace matcher, replacement ) isnt @nodeValue
       if not is_raw and '<' in new_value
         ( $ @ ).before new_value

@@ -19,13 +19,16 @@
     return $(R);
   };
 
-  $.fn.replace_text = function(matcher, replacement, is_raw) {
+  $.fn.replace_text = function(matcher, replacement, is_raw, text_nodes) {
     var to_be_removed;
     if (is_raw == null) {
       is_raw = false;
     }
+    if (text_nodes == null) {
+      text_nodes = null;
+    }
     to_be_removed = is_raw ? null : [];
-    return this.text_nodes().each(function(idx) {
+    return (text_nodes != null ? text_nodes : this.text_nodes()).each(function(idx) {
       var new_value;
       if ((new_value = this.nodeValue.replace(matcher, replacement)) !== this.nodeValue) {
         if (!is_raw && __indexOf.call(new_value, '<') >= 0) {
